@@ -1,6 +1,7 @@
 import React, { ChangeEvent, useState } from "react";
 import Button from "../components/Button";
 import Input from "../components/Input";
+import Task from "../components/Task";
 
 export default function Home() {
   const [taks, setTask] = useState('')
@@ -18,7 +19,10 @@ export default function Home() {
       <div className="w-[800px]">
         <div className="">
           <Input value={taks} onChange={handleChange} />
-          <Button onClick={handleAddTask}>add</Button>      
+          <Button onClick={handleAddTask}>add</Button>
+        </div>
+        <div>
+          <Task name="test name task" onCheckbox={() => { }} onDelete={() => { }} onEdit={() => { }} />
         </div>
       </div>
     </div>
